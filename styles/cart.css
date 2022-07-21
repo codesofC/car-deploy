@@ -1,0 +1,194 @@
+.cart{
+    position: relative;
+    width: 100%;
+    padding: 2rem; 
+}
+.cart .display-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.cart .display-container .container-cart{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container-cart .cart-content-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: rgba(255, 0, 0, .15);
+    padding-right: 1rem;
+}
+.container-cart .cart-content-item .content-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.content-item .item-img{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 10rem;
+    height: auto;
+}
+.content-item .item-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.content-item .item-name{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.content-item .item-name h4{
+    font-size: 110%;
+}
+.content-item .item-name h5{
+    font-size: 100%;
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+}
+.container-cart .cart-empty{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 150%;
+    color: rgb(255, 0, 0);
+}
+.cart-content-item .item-input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.cart-content-item .item-input-container input{
+    background-color: transparent;
+    border: 1px solid #000;
+    text-align: center;
+}
+.cart-content-item .item-input-container input:focus{
+    outline: none;
+}
+.icon-delete{
+    font-size: 110%;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+.cart .display-container .total-price{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #21404e;
+    padding: 2rem 1rem 1rem;
+}
+.cart .display-container .total-price p{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cart .display-container .total-price p span:nth-child(1){
+    font-size: 110%;
+    font-weight: 600;
+    color: #fff;
+}
+.cart .display-container .total-price p span:nth-child(2){
+    font-size: 125%;
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+.cart .display-container .total-price button{
+    padding: 1rem;
+    background-color: #f1be2a;
+    border: none;
+    color: #fff;
+    font-size: 110%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cart .display-container .total-price button:disabled{
+    background-color: #999;
+    cursor: default;
+}
+
+@media  screen and (max-width: 800px) {
+    .cart h1{
+        text-align: center;
+    }
+    .cart .display-container .container-cart{
+        width: 65%;
+    }
+    .container-cart .cart-content-item .content-item{
+        gap: .5rem;
+    }
+    .cart .display-container{
+        gap: 0;
+    }
+    .content-item .item-name{
+        padding: 1rem 0;
+    }
+    .cart .display-container .total-price{
+        width: 33%;
+    }
+    .cart .display-container .total-price p span:nth-child(1){
+        font-size: 100%;
+    }
+    .cart .display-container .total-price p span:nth-child(2){
+        font-size: 110%;
+    }
+    .cart .display-container .total-price button{
+        font-size: 100%;
+    }
+}
+@media  screen and (max-width: 650px) {
+    .cart{
+        padding: 1rem; 
+    }
+    .cart .display-container .container-cart{
+        width: 100%;
+        margin-bottom: 30vh;
+    }
+    .cart .display-container .total-price{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .container-cart .cart-content-item .content-item{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .content-item .item-name{
+        flex-direction: row;
+        padding: 0;
+    }
+}
+@media  screen and (max-width: 450px) {
+    .container-cart .cart-content-item .content-item{
+        gap: .5rem;
+    }
+    .content-item .item-img{
+        width: 7rem;
+    }
+    .content-item .item-name h4{
+        font-size: 100%;
+    }
+    .content-item .item-name h5{
+        font-size: 90%;
+    }
+    
+}
+@media  screen and (max-width: 280px) {
+    .content-item .item-img{
+        display: none;
+    }
+}

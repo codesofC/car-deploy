@@ -1,0 +1,77 @@
+.userui{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.userui .user-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: 110%;
+    width: 100%;
+    height: 100%;
+}
+.userui .user-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.userui .user-menu{
+    position: absolute;
+    top: 3.7rem;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: .3s clip-path ease-in-out;
+    z-index: 99;
+}
+.userui .user-menu.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.userui .user-menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    color: #fff;
+    background-color: #21404e;
+}
+.userui .user-menu ul li{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: .5rem;
+    font-weight: 550;
+    border-bottom: 1px solid #999;
+    cursor: default;
+    transition: .3s color background-color ease-in-out;
+}
+.userui .user-menu ul li:hover{
+    background-color: #f1be2a;
+    color: #21404e;
+    font-weight: 600;
+}
+.userui .user-menu ul li input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+@media (max-width: 720px) {
+    .userui .user-menu ul li:hover{
+        background-color: #fff;
+    }
+}

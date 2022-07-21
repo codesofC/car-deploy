@@ -1,0 +1,105 @@
+.headbody-container{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #f1be2a;
+    overflow: hidden;
+}
+.headbody-container .headbody-img{
+    position: absolute;
+    top: 0;
+    right: -35%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.headbody-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.headbody-container .headbody-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+    padding: 2rem;
+    z-index: 2;
+}
+.headbody-container .headbody-content p{
+    font-size: 130%;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: #21404e;
+}
+.headbody-container .headbody-content h2{
+    color: #21404e;
+    font-weight: 700;
+    font-size: 140%;
+}
+.headbody-container .headbody-content a{
+    text-decoration: none;
+    font-size: 110%;
+    background-color: #21404e;
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1440px) {
+    .headbody-container{
+        height: 60vh
+    }
+}
+@media screen and (max-width: 1180px) {
+    .headbody-container{
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .headbody-container{
+        height: 40vh;
+    }
+    .headbody-container .headbody-content{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 816px) {
+    .headbody-container{
+        height: auto;
+    }
+    .headbody-container .headbody-img{
+        right: -30%;
+    }
+    .headbody-container .headbody-content{
+        width: 90%;
+    }
+    .headbody-container .headbody-content p{
+        font-size: 110%;
+    }
+}
+@media screen and (max-width: 620px) {
+    .headbody-container{
+        height: auto;
+        justify-content: center;
+    }
+    .headbody-container .headbody-img{
+        display: none;
+    }
+    .headbody-container .headbody-content{
+        text-align: center;
+    }
+    .headbody-container .headbody-content p{
+        font-size: 110%;
+    }
+}
