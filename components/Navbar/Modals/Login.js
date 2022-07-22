@@ -83,7 +83,7 @@ export default function Login({ closeModal, openModal }) {
             </Link>
             <p className="signup-p">
                 Pas encore de compte? 
-                <span onClick={()=>openModal("SXWsignup")}>S inscrire</span>
+                <span onClick={()=>openModal("signup")}>S inscrire</span>
             </p>
             { button }
         </form>
